@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS su JQ</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+
+    Sukurti formą, kur galima įvesti:
+    1) vardas
+    2) pavardė
+    3) lytis (pasirinkti iš radio butonų)
+    4) patiekalas (pasirinkti iš sąrašo)
+    Sukurti mygtuką formoje, kurio pagalbą įdėti svečio duomenis į svečių lentelės apacią. Svečius numeruoti.
+    Realizacija panaudojant jQuery.
+<div class="row">
+    <div class="container">
+        <div class="col-12 col-md-8 offset-md-2">
+    <form action="/action_page.php">
+        <h1>Asmenu registracija</h1>
+        <div class="form-group">
+            <li>Vardas:<br>
+                <label for="pavadinimas"></label>
+            <div class="input-group mb-9">
+                <input type="text" name="vardass" id="vardas" class="form-control" placeholder="Vardas">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <li>Pavarde:<br>
+                <label for="pavarde"></label>
+            <input type="text" name="pavarde" id="pavarde" class="form-control" placeholder="Pavarde">
+        </div>
+        <br>
+    <form>
+        <input type="radio" name="gender" value="male" checked>Moteris<br>
+        <input type="radio" name="gender" value="female">Vyras<br>
+        <input type="radio" name="gender" value="other">Soc.lytis
+    </form>
+            </form>
+            <ul>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Patiekalai
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="https://worldrecipes.eu/lt/mesos-patiekalai/" target="_blank">Mesos</a>
+                        <a class="dropdown-item" href="https://www.lamaistas.lt/paieska?q=greiti+patiekalai+is+miltu" target="_blank">Miltu</a>
+                        <a class="dropdown-item" href="https://www.lamaistas.lt/receptai/desertai" target="_blank">Desertai</a>
+                    </div>
+                    <button class="btn btn-success" id="sukurti" onclick="add()" type="button">Atrinkti<i class="far fa-check-circle"></i></button>
+                </div>
+            </ul>
+        </div>
+
+
+        <div class="row">
+
+    <section id="secondSection">
+        <div class="container lentele2">
+            <div id="spausdinti"></div>
+        </div>
+    </section>
+
+
+    </div>
+</div>
+</div>
+
+</header>
+
+
+<main>
+        <div class="container">
+<div class="konturas">
+            <div class="row mb-5">
+                <div class="col-sm-4 border border-primary">
+                    <p>Melynasis batonas</p>
+                    <button type="button" class="btn btn-primary">Melynas</button>
+                </div>
+
+                <div class="col-sm-4 border border-primary">
+                    <p>Zaliasis batonas</p>
+                    <button type="button" class="btn btn-success">Zalias</button>
+                </div>
+                <div class="col-sm-4 border border-primary">
+                    <p>Geltonasis batonas</p>
+                    <button type="button" class="btn btn-warning">Geltonas</button>
+                </div>
+            </div>
+</div>
+    </div>
+</main>
+
+
+
+<div class="row">
+    <div>
+    <i class="fa fa-life-ring" style="font-size:48px">RUTULYS</i>
+</div>
+</div>
+<div class="b">
+    <button type="button" id="btn_filter" class="btn btn-default">BATONAS su TEIBLU</button>
+</div>
+<div></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
