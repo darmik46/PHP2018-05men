@@ -66,11 +66,19 @@ WHERE `id`=1";
             //            sita funkcija trina visas (ar visa) lenteles
             $sql5 = "DROP TABLE `users`";
 
+
+            $sql6 = "SELECT users.*, user_addresses.address
+            FROM `users`
+            INNER JOIN `user_addresses` ON `users`.`id` = `user_addresses`.`user_id`
+            WHERE `users`.`id` = 1";
+            
             echo '<pre>';
             //            cia ASSOC leidzia garantuociau gauti laukiama duomeni
             foreach (mysqli_fetch_all($users, MYSQLI_ASSOC) as $user) {
                 print_r($user);
             };
+
+
 
 
             echo '<br>';
