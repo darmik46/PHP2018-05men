@@ -1,6 +1,6 @@
 <h1>1 uzduotis</h1>
 <?php
-if (isset($_COOKIE['loged_in']) && $_COOKIE['loged_in']=true){
+if (isset($_COOKIE['logged_in']) && $_COOKIE['logged_in']==true){
     echo 'You are logged in!';
     ?>
     <a href="Logout.php">Logout</a>
@@ -26,12 +26,9 @@ if (isset($_COOKIE['loged_in']) && $_COOKIE['loged_in']=true){
 
             <?php
             }
-            if (isset($_COOKIE['loged_in']) && $_COOKIE['loged_in']=true){
-                echo 'You are logged in!';
-            }
+           
             try {
-                $username = 'dariusM';
-                $pass = 'darmik47';
+                $username = 'dariusM';                $pass = 'darmik47';
 
                 $dht = new PDO(
                     'mysql:host=localhost:3306; dbname=dariusM',
@@ -56,8 +53,8 @@ if (isset($_COOKIE['loged_in']) && $_COOKIE['loged_in']=true){
                 echo '</pre>';
 
                 if (!empty($result)) {
-                    setcookie('loged_in', true, time() + 86400);
-                    header('location: http://05-17.eu/test05-17.php');
+                    setcookie('logged_in', true, time() + 86400);
+                    header('Location: http://05-17.eu/test05-17.php');
                 }
             }
             echo '</ul>';
@@ -72,9 +69,7 @@ if (isset($_COOKIE['loged_in']) && $_COOKIE['loged_in']=true){
     <tr>
         <td>
             <?php
-               setcookie('loged_in', true,  time()+2628000);
-            header('location: http://05-17.eu/test05-17.php');
-
+              
             echo '<pre>';
 
             echo '</pre>';
